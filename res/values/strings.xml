@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">外置摄像头录制</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置</string>
+    <string name="select">选择USB设备</string>
+    <string name="camera">Camera</string>
+    <string name="refresh">刷新</string>
+    <string name="no_device">No USB camera found</string>
+</resources>

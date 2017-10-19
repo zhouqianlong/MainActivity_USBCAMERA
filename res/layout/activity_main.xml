@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <SurfaceView
+        android:id="@+id/surfaceViewPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true" />
+
+    <RelativeLayout
+        android:gravity="bottom"
+        android:id="@+id/relativeLayout1"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp" >
+
+        <RadioButton
+            android:id="@+id/radioButtonfront"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="前置" />
+
+        <RadioButton
+            android:id="@+id/radioButtonback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/radioButtonfront"
+            android:text="后置" />
+
+        <RadioButton
+            android:id="@+id/radioButtonUSB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/radioButtonback"
+            android:text="USB" />
+
+        <RelativeLayout
+            android:id="@+id/recorder_surface_parent11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/radioButtonback" >
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textViewlabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/recorder_surface_parent11"
+            android:text="时间:" />
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recorder_surface_parent11"
+            android:layout_toRightOf="@id/textViewlabel"
+            android:text="00:00:00" />
+
+        <Button
+            android:id="@+id/buttonStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewlabel"
+            android:layout_marginTop="1dp"
+            android:text="开始" />
+
+        <Button
+            android:id="@+id/buttonStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewlabel"
+            android:layout_toRightOf="@+id/buttonStart"
+            android:text="停止" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_toRightOf="@+id/relativeLayout1" >
+
+        <RelativeLayout
+            android:id="@+id/recorder_surface_play"
+            android:layout_width="match_parent"
+            android:layout_height="160px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" >
+
+            <Button
+                android:id="@+id/buttonStopPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="停止" />
+
+            <Button
+                android:id="@+id/buttonPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/buttonStopPlay"
+                android:text="播放" />
+
+            <Button
+                android:id="@+id/btn_playwav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/buttonPlay"
+                android:layout_toStartOf="@+id/buttonPlay"
+                android:text="播放声音 " />
+
+            <Button
+                android:id="@+id/btn_recorderwav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/btn_playwav"
+                android:text="录音" />
+        </RelativeLayout>
+
+        <TextureView
+            android:id="@+id/surfaceViewplay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/recorder_surface_play"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="0dp" />
+    </RelativeLayout>
+
+</RelativeLayout>
